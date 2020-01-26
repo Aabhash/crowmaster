@@ -1,13 +1,18 @@
 Crow Master Bot
 ================
 
-
 AI enabled reddit bot.
 
-Requirements
+Getting up and running
 ===
-- 
 
+Set up a virtual environment. 
+
+```
+conda create -n bot_env python=3.7 conda
+conda install -c conda-forge praw
+conda install -c conda-forge python-dotenv
+```
 
 Contributing
 ===

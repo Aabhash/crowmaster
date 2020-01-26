@@ -9,6 +9,8 @@ question, intent
 "you are good", "crowmaster-good"
 "I like you", "crowmaster-good"
 "You are quite good", "crowmaster-good"
+"Crow master", "crowmaster-notify"
+"Crowmaster", "crowmaster-notify"
 "Crow master, How many messages do I have?", "crowmaster-notify"
 "Do you have any messages for me?", "crowmaster-notify"
 "Why wasn't I notified sooner?", "crowmaster-search"
