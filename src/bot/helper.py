@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 
 import src.bot.config as config
+from src.model.train import Trainer
 
 
 def get_env(env_key, filepath):
@@ -126,5 +127,13 @@ def track_replied_comments(cmt_id, file_path=config.post_replied_to_file):
     with open(file_path, "a") as f:
         f.write(cmt_id + "\n")
 
-def get_random_quote():
-    return "HELLO"
+def get_random_quote(comment):
+    """ Calls trainer class to retrieve answer from model
+    
+    :param comment: Commend made by the user
+    :type comment: String
+    :return: Reply to the user
+    :rtype: String
+    """    
+    trainer = Trainer()
+    return trainer.craft_reply(comment)

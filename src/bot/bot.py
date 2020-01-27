@@ -46,11 +46,10 @@ if __name__ == '__main__':
             logger.info("Going through all comments ...")
             for comment in comments:
                 username = helper.get_username(comment.author)
-                print(comment.id, username)
                 if comment.id not in posts_replied_to:
 
                     if helper.is_triggered(triggers, comment.body):
-                        comment.reply(helper.get_random_quote())
+                        comment.reply(helper.get_random_quote(comment.body))
                         logger.info(
                             f"Replied to comment in subreddit '{comment.subreddit}'")
 
