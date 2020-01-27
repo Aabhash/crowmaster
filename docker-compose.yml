@@ -5,6 +5,3 @@ services:
     image: crowmaster:1.0
     build:
       context: .
-    environment:
-        - ENV=TEST
-        - TST_SUBS=test

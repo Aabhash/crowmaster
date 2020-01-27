@@ -46,7 +46,7 @@ if __name__ == '__main__':
             logger.info("Going through all comments ...")
             for comment in comments:
                 username = helper.get_username(comment.author)
-                if comment.id not in posts_replied_to and comment.author != config.bot_name:
+                if comment.id not in posts_replied_to and comment.author != config.bot_name and username:
                     logger.info(f"{comment.id}, {username}")
                     if helper.is_triggered(triggers, comment.body):
                         comment.reply(helper.get_random_quote(comment.body))
