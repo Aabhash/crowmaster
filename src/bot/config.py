@@ -5,3 +5,4 @@ trigger_file = "src/bot/trigger.json"
 sub_json = "src/bot/subs.json"
 praw_ini = "praw.ini"
 env = "src/bot/.env"
+bot_name = 'crowmaster-bot'

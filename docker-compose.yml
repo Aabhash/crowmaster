@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  crowmaster:
+    image: crowmaster:1.0
+    build:
+      context: .
+    environment:
+        - ENV=TEST
+        - TST_SUBS=test
