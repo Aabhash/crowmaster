@@ -1,8 +1,6 @@
 import random
 import pandas as pd
 
-import logging
-from logging.config import fileConfig
 import sklearn
 import src.model.model_config as mc
 
@@ -16,8 +14,6 @@ class Trainer:
         """
         Constructor for the trainer class
         """
-        fileConfig(mc.log_config_file)
-        self.logger = logging.getLogger('trainer')
         self.data_path = mc.training_data
         self.answer_data_path = mc.answers_data
         self.model_config = read_json(mc.config_path)
@@ -39,7 +35,13 @@ class Trainer:
         - Set Object.model to be trained model
         :return: None
         """
+        import logging
+        from logging.config import fileConfig
+        
+        self.logger = logging.getLogger('trainer')
         self.set_config_params()
+        
+        fileConfig(mc.log_config_file)
         
         self.logger.info("Training begun")
         model = train_model(self.model_config)

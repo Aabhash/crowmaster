@@ -8,6 +8,9 @@ question,intent
 "Who are you?", crowmaster-identity
 "you are good", crowmaster-good
 "I like you", crowmaster-good
+"Thats it", crowmaster-good
+"That is it, thanks", crowmaster-good
+"Thank you", crowmaster-good
 "You are quite good", crowmaster-good
 "Crow master", crowmaster-notify
 "Crowmaster", crowmaster-notify
@@ -20,3 +23,8 @@ question,intent
 "Crow Lord", crowlord-search
 "crow lord!", crowlord-search
 "summon the crow lord", crowlord-search
+"Read all", crowlord-messages
+"Read all my messages", crowlord-messages
+"Read my message", crowlord-messages
+"Can you summarize?", crowlord-messages-summary
+"Can you summarize the messages?", crowlord-messages-summary

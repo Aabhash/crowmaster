@@ -137,3 +137,17 @@ def get_random_quote(comment):
     """    
     trainer = Trainer()
     return trainer.craft_reply(comment)
+
+def is_a_reply(comment):
+    """Returns whether or not the comment is a reply to bot's comment
+    
+    :param comment: incoming user comment
+    :type comment: String
+    :return: Whether or not bot replied to this post's parent
+    :rtype: Bool
+    """    
+    try:
+        author = comment.parent().author
+        return author == config.bot_name
+    except AttributeError:
+        return False 
