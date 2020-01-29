@@ -136,7 +136,8 @@ def get_random_quote(comment):
     :rtype: String
     """    
     trainer = Trainer()
-    return trainer.craft_reply(comment)
+    reply = trainer.craft_reply(comment) + config.answer_template
+    return reply
 
 def is_a_reply(comment):
     """Returns whether or not the comment is a reply to bot's comment

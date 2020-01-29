@@ -48,7 +48,7 @@ if __name__ == '__main__':
                 username = helper.get_username(comment.author)
                 if comment.id not in posts_replied_to and comment.author != config.bot_name and username:
                     logger.info(f"{comment.id}, {username}")
-                    if helper.is_triggered(triggers, comment.body) or helper.is_a_reply(comment):
+                    if helper.is_triggered(triggers, comment.body):# or helper.is_a_reply(comment):
                         comment.reply(helper.get_random_quote(comment.body))
                         logger.info(
                             f"Replied to comment in subreddit '{comment.subreddit}', '{comment.author}', '{comment.body}'")

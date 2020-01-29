@@ -6,3 +6,5 @@ sub_json = "src/bot/subs.json"
 praw_ini = "praw.ini"
 env = "src/bot/.env"
 bot_name = 'crowmaster-bot'
+
+answer_template = """ \n --- \n *^(I am a bot. Okay, thanks.)*"""
